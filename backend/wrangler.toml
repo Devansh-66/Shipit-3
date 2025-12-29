@@ -1,0 +1,14 @@
+name = "critic-ai-backend"
+main = "src/index.ts"
+compatibility_date = "2024-11-01"
+compatibility_flags = [ "nodejs_compat" ]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "shipit-db"
+database_id = "58c7a8b0-a340-4efb-8d73-4c1061d4b84a"
+
+[[kv_namespaces]]
+binding = "AI_CACHE"
+id = "7cc6874f1f7d4de5832ef5bee250e1f8"
+preview_id = "75fad59220354075a3d027702f539d77"

@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-bg: rgba(0, 0, 0, 0.4);
+  --neon-primary: #00f2ff;
+  --neon-secondary: #7000ff;
+}
+
+body {
+  @apply bg-black text-white min-h-screen font-sans;
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(112, 0, 255, 0.2) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(0, 242, 255, 0.15) 0%, transparent 40%);
+}
+
+.glass-panel {
+  @apply backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl shadow-2xl;
+}
+
+.neon-text {
+  text-shadow: 0 0 10px rgba(0, 242, 255, 0.5);
+}

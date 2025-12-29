@@ -1,0 +1,43 @@
+name: Deploy Critic.AI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy-backend:
+    runs-on: ubuntu-latest
+    name: Deploy Backend (Worker)
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Dependencies
+        run: cd backend && npm install
+      - name: Deploy to Cloudflare Workers
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          workingDirectory: 'backend'
+
+  deploy-frontend:
+    runs-on: ubuntu-latest
+    name: Deploy Frontend (Pages)
+    needs: deploy-backend
+    permissions:
+      contents: read
+      deployments: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Dependencies
+        run: cd frontend && npm install
+      - name: Build Frontend
+        run: cd frontend && npm run build
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: 'critic-ai-frontend'
+          directory: 'frontend/dist'
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
