@@ -9,7 +9,6 @@ type Bindings = {
     GOOGLE_API_KEY?: string
     GOOGLE_CSE_ID?: string
     YOUTUBE_API_KEY?: string
-    GEMINI_API_KEY?: string
 }
 
 const app = new Hono<{ Bindings: Bindings }>()

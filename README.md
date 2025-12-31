@@ -23,7 +23,7 @@ Synapse is an advanced **Agentic AI IDE Companion** that lets you visualize, exp
 
 *   **Frontend:** React, Vite, TailwindCSS v4, Lucide Icons, Framer Motion.
 *   **Backend:** Cloudflare Workers, Hono, TypeScript.
-*   **AI Inference:** OpenRouter (NVIDIA Nemotron/Llama 3 models) & Google Gemini.
+*   **AI Inference:** OpenRouter (NVIDIA Nemotron/Llama 3 models).
 
 ## 🏃‍♂️ How to Run Locally
 

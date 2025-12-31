@@ -8,7 +8,6 @@
     "deploy": "wrangler deploy"
   },
   "dependencies": {
-    "@google/generative-ai": "^0.24.1",
     "buffer": "^6.0.3",
     "cheerio": "^1.1.2",
     "hono": "^4.0.0"
