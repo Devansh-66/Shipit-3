@@ -1,34 +1,33 @@
-# Critic.AI 🧐
-**The Brutally Honest Professional Asset Auditor**
+# Synapse 🧠
+**Intelligent Codebase Visualization & Analysis**
 
-![Critic.AI Hero](https://placehold.co/1200x600/000000/00f2ff?text=Critic.AI+Preview)
+![Synapse Preview](https://placehold.co/1200x600/0a0a0a/00f2ff?text=Synapse+Code+Explorer)
 
-> **ShipIt 3.0 Entry | Category 7: AI + Real-World Feedback Systems**
+> **ShipIt 3.0 Entry | Category: Dev Tools / AI Agents**
 
-Critic.AI goes beyond generic "ChatGPT advice". It uses **Multimodal AI (Gemini 1.5 Flash)** to "see" your Resume or Portfolio, analyzing visual hierarchy, typography, and content impact simultaneously.
-
-It simulates a **Hiring Committee** of three distinct AI Persona Agents to give you balanced, actionable feedback.
+Synapse is an advanced **Agentic AI IDE Companion** that lets you visualize, explore, and talk to your GitHub repositories. It combines a beautiful glassmorphic file explorer with a powerful context-aware AI chat to help developers understand complex codebases instantly.
 
 ## 🚀 Features
 
-*   **🕵️‍♂️ The Hiring Committee Simulation:**
-    *   **The Ruthless Recruiter:** Focuses on impact and brevity.
-    *   **The Design Snob:** Critiques whitespace, fonts, and layout.
-    *   **The ATS Bot:** Checks for keyword parsing and formatting.
-*   **📊 Quantitative Scoring:** Get a 0-100 score based on 4 key metrics (Visuals, Content, Impact, Grammar).
-*   **💾 Cloudflare D1 Persistence:** Every audit is saved to the edge database for historical tracking.
-*   **⚡ Serverless Architecture:** Built on Cloudflare Workers & Pages for instant speed and 0 cost.
+*   **📂 Interactive Code Visualization:** View any GitHub repository as a navigable file tree instantly.
+*   **🤖 Context-Aware AI Chat:** Chat with an AI that knows your repository's structure and file contents.
+*   **👁️ Live Preview:** Preview the `homepage` of the repository directly within the app.
+*   **📝 Rich Code Experience:** Full syntax highlighting, markdown rendering, and tabbed code browsing.
+*   **🛠️ Agentic Tools:**
+    *   **Repo Walker:** The AI can list files and read file contents autonomously.
+    *   **Web Search:** Capable of searching Google/YouTube for libraries and documentation.
+    *   **Document Analysis:** (Optional) Analyze images and PDFs for context.
+*   **⚡ Serverless Architecture:** Powered by Cloudflare Workers for low-latency performance.
 
 ## 🛠️ Tech Stack
 
-*   **Frontend:** React, Vite, TailwindCSS (Glassmorphism UI), Framer Motion.
+*   **Frontend:** React, Vite, TailwindCSS v4, Lucide Icons, Framer Motion.
 *   **Backend:** Cloudflare Workers, Hono, TypeScript.
-*   **Database:** Cloudflare D1 (SQLite at the Edge).
-*   **AI:** Google Gemini 1.5 Flash (Multimodal Vision + Text).
+*   **AI Inference:** OpenRouter (NVIDIA Nemotron/Llama 3 models) & Google Gemini.
 
 ## 🏃‍♂️ How to Run Locally
 
-1.  **Clone the repo**
+1.  **Clone the Repo**
     ```bash
     git clone https://github.com/Devansh-66/Shipit-3.git
     cd Shipit-3
@@ -41,18 +40,21 @@ It simulates a **Hiring Committee** of three distinct AI Persona Agents to give 
     ```
 
 3.  **Setup Secrets**
-    Create a `.dev.vars` file in `/backend`:
+    Create a `.dev.vars` file in `/backend` with your API keys:
     ```env
-    GEMINI_API_KEY="your_google_api_key_here"
+    OPENROUTER_API_KEY="your_key"
+    # Optional:
+    GOOGLE_API_KEY="..."
+    GOOGLE_CSE_ID="..."
     ```
 
 4.  **Run Development Servers**
-    *   Backend: `cd backend && npm run dev` (Runs on port 8787)
-    *   Frontend: `cd frontend && npm run dev` (Runs on port 5173)
+    *   **Backend:** `cd backend && npm run dev` (Runs on port 8787)
+    *   **Frontend:** `cd frontend && npm run dev` (Runs on port 5173)
 
 ## 🚢 Deployment
 
-Automatically deployed via **GitHub Actions** to Cloudflare Pages (Frontend) and Cloudflare Workers (Backend).
+Deployed to **Cloudflare Pages** (Frontend) and **Cloudflare Workers** (Backend).
 
 ---
-*Built with ❤️ for ShipIt 3.0*
+*Built for ShipIt 3.0*
