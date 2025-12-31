@@ -1,7 +1,7 @@
 # Synapse 🧠
 **Intelligent Codebase Visualization & Analysis**
 
-![Synapse Preview](./frontend/src/assets/preview.png)
+![Synapse Preview](https://github.com/Devansh-66/Shipit-3/blob/main/frontend/src/assets/image.png)
 
 > **ShipIt 3.0 Entry | Category: Dev Tools / AI Agents**
 
