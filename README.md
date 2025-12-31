@@ -1,7 +1,7 @@
 # Synapse 🧠
 **Intelligent Codebase Visualization & Analysis**
 
-![Synapse Preview](https://placehold.co/1200x600/0a0a0a/00f2ff?text=Synapse+Code+Explorer)
+![Synapse Preview](./frontend/src/assets/preview.png)
 
 > **ShipIt 3.0 Entry | Category: Dev Tools / AI Agents**
 
@@ -11,19 +11,19 @@ Synapse is an advanced **Agentic AI IDE Companion** that lets you visualize, exp
 
 *   **📂 Interactive Code Visualization:** View any GitHub repository as a navigable file tree instantly.
 *   **🤖 Context-Aware AI Chat:** Chat with an AI that knows your repository's structure and file contents.
-*   **👁️ Live Preview:** Preview the `homepage` of the repository directly within the app.
+*   **👁️ Live Preview:** Preview the `homepage` of the repository directly within the app (if available in the repository).
 *   **📝 Rich Code Experience:** Full syntax highlighting, markdown rendering, and tabbed code browsing.
 *   **🛠️ Agentic Tools:**
     *   **Repo Walker:** The AI can list files and read file contents autonomously.
     *   **Web Search:** Capable of searching Google/YouTube for libraries and documentation.
-    *   **Document Analysis:** (Optional) Analyze images and PDFs for context.
+    *   **Document Analysis:** (Optional) Analyze images and PDFs for context from the repository.
 *   **⚡ Serverless Architecture:** Powered by Cloudflare Workers for low-latency performance.
 
 ## 🛠️ Tech Stack
 
 *   **Frontend:** React, Vite, TailwindCSS v4, Lucide Icons, Framer Motion.
 *   **Backend:** Cloudflare Workers, Hono, TypeScript.
-*   **AI Inference:** OpenRouter (NVIDIA Nemotron/Llama 3 models).
+*   **AI Inference:** OpenRouter (NVIDIA Nemotron models).
 
 ## 🏃‍♂️ How to Run Locally
 
