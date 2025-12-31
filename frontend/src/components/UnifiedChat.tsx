@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Loader2, Send, Bot, User, Sparkles, Paperclip, Terminal, Copy, RefreshCw, Edit, ArrowDownCircle, ChevronLeft, ChevronRight } from 'lucide-react';
 import MarkdownRenderer from './MarkdownRenderer';
+import { API_BASE_URL } from '../config';
 
 interface UnifiedChatProps {
     repoUrl: string;
@@ -225,7 +226,7 @@ export const UnifiedChat: React.FC<UnifiedChatProps> = ({ repoUrl, tree, attache
 
     const streamResponse = async (history: any[], lastMessage: string, targetMsgId: number, versionIdx: number) => {
         try {
-            const response = await fetch('http://localhost:8787/chat', {
+            const response = await fetch(`${API_BASE_URL}/chat`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ 

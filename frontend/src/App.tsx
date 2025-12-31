@@ -3,6 +3,7 @@ import { FileExplorer } from './components/FileExplorer';
 import { CodePanel } from './components/CodePanel';
 import { PreviewPanel } from './components/PreviewPanel';
 import { UnifiedChat } from './components/UnifiedChat';
+import { API_BASE_URL } from './config';
 import { Loader2, ArrowLeft, Eye, EyeOff, PanelLeftClose, PanelLeftOpen, LayoutTemplate, GripVertical } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
@@ -70,7 +71,7 @@ function App() {
     setSelectedFile(null);
 
     try {
-        const response = await fetch('http://localhost:8787/visualize', {
+        const response = await fetch(`${API_BASE_URL}/visualize`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ repoUrl })
@@ -100,7 +101,7 @@ function App() {
       setAnalyzingFile(true);
       
       try {
-        const response = await fetch('http://localhost:8787/content', {
+        const response = await fetch(`${API_BASE_URL}/content`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ 

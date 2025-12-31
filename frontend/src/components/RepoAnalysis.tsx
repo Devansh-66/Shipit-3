@@ -3,6 +3,7 @@ import ReactMarkdown from 'react-markdown';
 import { Loader2, Send, Bot, User, Sparkles, Map } from 'lucide-react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { API_BASE_URL } from '../config';
 
 interface RepoAnalysisProps {
     repoUrl: string;
@@ -38,7 +39,7 @@ export const RepoAnalysis: React.FC<RepoAnalysisProps> = ({ repoUrl, tree }) => 
         setLoading(true);
 
         try {
-            const response = await fetch('http://localhost:8787/chat', {
+            const response = await fetch(`${API_BASE_URL}/chat`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ 
